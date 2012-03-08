@@ -45,7 +45,7 @@ class Strap(BootstrapExtender):
         sys.stdout.write('\n')
         sys.stdout.write(textwrap.dedent(self.default_message % home_dir))
         sys.stdout.write('\n')
-        cmd = "%(home_dir)s/bin/pip freeze -lE %(home_dir)s " %dict(home_dir=home_dir)
+        cmd = "%(home_dir)s/bin/pip freeze -l %(home_dir)s " %dict(home_dir=home_dir)
         self.subprocess(cmd.split(' '))
 
 
